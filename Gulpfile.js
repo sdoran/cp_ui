@@ -33,21 +33,27 @@ gulp.task('browserSync', function() {
 
 gulp.task('watch', function () {
     // Lint the JS files when they change
-    gulp.watch(config.SOURCE_FILES, ['lint', 'traceur', reload]);
+    gulp.watch(config.SOURCE_FILES, ['lint', 'concat-js', reload]);
     gulp.watch(config.SOURCE_HTML, reload);
     gulp.watch(config.SASS_ALL, ['styles', reload]);
 });
 
-/* Sourcemaps seem to not be working when a base is specified */
-gulp.task('traceur', function () {
+gulp.task('concat-js', ['concat-app-js', 'concat-third-party-js'], function() {
+
+});
+
+gulp.task('concat-app-js', function () {
     return gulp.src(config.SOURCE_FILES, {base: config.BASE_PATH})
-        .pipe($.traceur({
-            modules: 'register',
-            moduleName : true
-        }))
         .pipe($.concat(config.PROD_JS_FILENAME))
         .pipe(gulp.dest(config.PROD_JS_PATH))
         .pipe(reload({stream:true}));
 });
 
-gulp.task('default', ['styles', 'lint', 'watch', 'browserSync']);
+gulp.task('concat-third-party-js', function () {
+  return gulp.src(config.THIRD_PARTY_SOURCE_FILES, {base: config.BASE_PATH})
+    .pipe($.concat(config.THIRD_PARTY_JS_FILENAME))
+    .pipe(gulp.dest(config.PROD_JS_PATH))
+    .pipe(reload({stream:true}));
+});
+
+gulp.task('default', ['styles', 'concat-js', 'lint', 'watch', 'browserSync']);

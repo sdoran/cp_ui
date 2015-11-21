@@ -1,6 +1,6 @@
 (function() {
   'use strict';
 
-  angular.module('CpApp.layout', []);
+  angular.module('cpApp.layout', ['cpApp.topNav']);
 
 })();

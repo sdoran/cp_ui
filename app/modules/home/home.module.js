@@ -1,9 +1,7 @@
-import HomeController from "./home-controller";
-import HomeService from "./home-service";
+(function() {
+  'use strict';
 
-var homeModule = angular.module("CpHome", []);
+  angular
+    .module('cpApp.home', ['ngMaterial', 'cpApp.layout']);
 
-homeModule.controller("HomeCtrl", HomeController);
-homeModule.service("HomeService", HomeService);
-
-export default homeModule;
+})();

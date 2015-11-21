@@ -20,7 +20,7 @@
   "smarttabs": true,
   "browserify" : true,
   "globals": {
-    "angular": false,
+    "angular": true,
     "_": false,
     "it": false,
     "xit": false,

@@ -1,6 +1,8 @@
-'use strict';
+(function() {
+  'use strict';
+
   angular
-    .module('CpApp.layout')
+    .module('cpApp.topNav')
     .directive('CpTopNav', topNav);
 
   function topNav() {
@@ -10,4 +12,5 @@
       restrict: 'E'
     };
     return directive;
-  };
+  }
+})();

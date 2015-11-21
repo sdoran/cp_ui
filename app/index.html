@@ -5,18 +5,16 @@
     <title>Angular ES6 Seed</title>
 
     <!-- Bootstrap -->
-    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <link href="dist/app.css" rel="stylesheet">
 
 </head>
-<body ng-app="CpApp" layout="row">
+<body layout="row">
+<cp-nav-bar></cp-nav-bar>
 <section class="main-content">
     <ui-view></ui-view>
 </section>
 
-<!--<script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>-->
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="dist/ext.js"></script>
 <script src="dist/bundle.js"></script>
 
 </body>
