@@ -3,3 +3,4 @@ app/bower_components/*
 app/dist/*
 *.log
 .idea/*
+.DS_Store
