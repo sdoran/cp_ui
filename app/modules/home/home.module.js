@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('cpApp.home', ['ngMaterial', 'cpApp.layout']);
+    .module('cpApp.home',['cpApp.layout']);
 
 })();

@@ -3,12 +3,12 @@
 
   angular
     .module('cpApp.topNav')
-    .directive('CpTopNav', topNav);
+    .directive('cpTopNav', topNav);
 
   function topNav() {
     var directive = {
-      link: link,
-      templateUrl: 'top-nav.directive.html',
+
+      templateUrl: 'modules/layout/navigation/top-nav.directive.html',
       restrict: 'E'
     };
     return directive;
