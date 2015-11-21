@@ -1,7 +1,5 @@
-angular-es6-seed
-================
-
-Seed project using Angular and all ES6 syntax (especially classes and modules)
+Coolest Projects test new UI
+============================
 
 Uses:
 
