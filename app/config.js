@@ -1,4 +1,4 @@
-
+'use strict';
 class Config {
 
     constructor($stateProvider, $urlRouterProvider){
