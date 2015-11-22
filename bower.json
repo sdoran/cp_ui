@@ -20,7 +20,6 @@
     "angular-material": "^0.8.0",
     "angular-local-storage": "~0.1.5",
     "ngprogress": "~1.0.7",
-
     "bootstrap": "~3.3.0",
     "angular-ui-router": "~0.2.11"
   },
@@ -28,5 +27,8 @@
     "angular": "~1.4.x",
     "angular-animate": "v1.4.x",
     "angular-aria": "^1.4.x"
+  },
+  "devDependencies": {
+    "angular-material-icons": "~0.6.0"
   }
 }

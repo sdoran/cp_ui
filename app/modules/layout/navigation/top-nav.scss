@@ -1,4 +1,46 @@
+$gray: #eee;
 
-
-.toolbardemoBasicUsage md-toolbar md-icon.md-default-theme {
-  color: white; }
+md-content.md-default-theme {
+  background-color: $gray;
+}
+md-card {
+  background-color: #fff;
+  h2:first-of-type {
+    margin-top: 0;
+  }
+}
+md-toolbar {
+  .md-button.md-default-theme {
+    border-radius: 99%; // round toolbar buttons
+  }
+}
+h2 {
+  font-weight: 400;
+}
+.md-toolbar-tools-bottom {
+  font-size: small;
+  & :last-child {
+    opacity: 0.8;
+  }
+}
+md-toolbar:not(.md-hue-1),
+.md-fab {
+  fill: #fff;
+}
+md-sidenav {
+  fill: #737373;
+  ng-md-icon {
+    position: relative;
+    top: 5px; // adjust for svg viewbox
+  }
+}
+.user-avatar {
+  border-radius: 99%;
+}
+//INputs
+md-input-container:not(.md-input-invalid) > md-icon.email-icon {
+  color: green; }
+md-input-container:not(.md-input-invalid) > ng-md-icon.person-icon {
+  color: dodgerblue; }
+ md-input-container.md-input-invalid > md-icon.email-icon, md-input-container.md-input-invalid > md-icon.person-icon {
+  color: red; }

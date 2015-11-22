@@ -1,5 +1,24 @@
 (function() {
   'use strict';
 
-  angular.module('cpApp.layout', ['cpApp.topNav']);//'cpApp.topNav'
+  angular.module('cpApp.layout', ['ngMaterial','cpApp.topNav'])
+    .config(function($mdThemingProvider) {
+
+      // Configure a dark theme with primary foreground yellow
+
+      var customBlueMap = 		$mdThemingProvider.extendPalette('light-blue', {
+        'contrastDefaultColor': 'light',
+        'contrastDarkColors': ['50'],
+        '50': 'ffffff'
+      });
+      $mdThemingProvider.definePalette('customBlue', customBlueMap);
+      $mdThemingProvider.theme('default')
+        .primaryPalette('customBlue', {
+          'default': '500',
+          'hue-1': '50'
+        })
+        .accentPalette('pink');
+      $mdThemingProvider.theme('input', 'default')
+        .primaryPalette('grey')
+    });
 })();
