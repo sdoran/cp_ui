@@ -1,0 +1,60 @@
+<md-content flex md-scroll-y>
+    <ui-view layout="row" layout-padding>
+        <div class="inset" hide-sm></div>
+                <md-card flex-gt-sm="40" flex-gt-md="50">
+                    <md-card-content>
+                        <md-content layout-padding="1" layout="row" layout-sm="column">
+                            <md-input-container>
+                                <ng-md-icon icon="person" size="36" class="person-icon"></ng-md-icon>
+                            </md-input-container>
+                            <md-input-container class="md-icon-float md-block">
+                                <label>First Name</label>
+                                <input ng-model="presenter.first-name" ng-required="true">
+                            </md-input-container>
+                            <md-input-container>
+                                <label>Last Name</label>
+                                <input ng-model="presenter.last-name" ng-required="true">
+                            </md-input-container>
+                        </md-content>
+                        <md-content  layout-padding="" layout="row" layout-sm="column">
+                            <md-input-container>
+                                <ng-md-icon icon="email" size="36" class="email-icon"></ng-md-icon>
+                            </md-input-container>
+                            <md-input-container>
+                                <label>Email</label>
+                                <input ng-model="presenter.email" type="email" ng-required="true">
+                            </md-input-container>
+                            <md-input-container>
+                                <label>Confirm Email</label>
+                                <input ng-model="presenter.confirm-email" type="email" ng-required="true">
+                            </md-input-container>
+                        </md-content>
+                        <md-content layout-padding="" layout="row" layout-sm="column">
+                            <md-input-container>
+                                <span>Provide a password to log in later and update your details</span>
+                                <label>Password</label>
+                                <input ng-model="presenter.password" type="password" ng-required="true">
+                            </md-input-container>
+                        </md-content>
+                        <md-content layout-padding="" layout="row" layout-sm="column"> <md-input-container>
+                            <label>Date of Birth</label>
+                            <input ng-model="presenter.dob" type="date" ng-required="true">
+                        </md-input-container>
+                            <md-input-container>
+                                <label>Gender</label>
+                            </md-input-container>
+                            <md-input-container>
+                                <md-radio-group ng-model="presenter.gender">
+                                    <md-radio-button value="Male" class="md-primary">Male</md-radio-button>
+                                    <md-radio-button value="Female">Female</md-radio-button>
+                                </md-radio-group>
+                            </md-input-container>
+                        </md-content>
+                    </md-card-content>
+                </md-card>
+
+        <div class="inset" hide-sm>
+          <register-name-badge></register-name-badge>
+        </div>
+    </ui-view>
+</md-content>

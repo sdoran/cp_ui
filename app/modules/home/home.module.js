@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('cpApp.home',['cpApp.layout']);
+    .module('cpApp.home',['cpApp.layout', 'cpApp.registration']);
 
 })();

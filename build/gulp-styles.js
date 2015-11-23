@@ -18,7 +18,7 @@ module.exports = function (gulp) {
     log('styles: adding to ' + config.build);
 
     return gulp
-      .src(config.SASS_ALL)
+      .src(config.SASS_PARENT)
       .pipe($.plumber()) // exit gracefully if something fails after this
       .pipe($.sass().on('error', $.sass.logError))
      // .pipe($.autoprefixer({browsers: ['last 2 version', '> 5%']})) //may not be required

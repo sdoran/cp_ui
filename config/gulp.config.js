@@ -15,7 +15,8 @@ module.exports = function () {
     css: build + '*.css',
     images: client + 'img/**/*.*',
     index: client + 'index.ejs',
-    SASS_ALL: client + 'styles/**/*.scss',
+    SASS_PARENT: './app/styles/app.scss',
+    SASS_ALL: './app/modules/**/*.scss',
     bower: bower,
     client: client,
     packages: [
