@@ -20,9 +20,15 @@
   PresenterFormController.$inject = ['$scope', '$mdBottomSheet', '$mdSidenav', '$mdDialog'];
   function PresenterFormController($scope, $mdBottomSheet, $mdSidenav, $mdDialog) {
     /*jshint validthis: true */
-    var vm = this;
-
-
+    $scope.presenter = {
+      firstName: '',
+      lastName: '',
+      email: '',
+      confirmEmail: '',
+      password: '',
+      dob: '',
+      gender: ''
+    }
   }
 })();
 
